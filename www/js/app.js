@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic'])
+angular.module('CashOut', ['ionic'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
@@ -31,7 +31,8 @@ angular.module('app', ['ionic'])
 
           .state('home', {
             url: '/home',
-            templateUrl: 'templates/home.html'
+            templateUrl: 'templates/home.html',
+            controller: 'HomeCtrl'
           })
 
           .state('addScreen', {
