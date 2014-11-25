@@ -31,17 +31,17 @@ angular.module('app', ['ionic'])
 
           .state('home', {
             url: '/home',
-            templateUrl: '/templates/home.html'
+            templateUrl: 'templates/home.html'
           })
 
           .state('addScreen', {
             url: '/addScreen',
-            templateUrl: '/templates/addScreen.html'
+            templateUrl: 'templates/addScreen.html'
           })
 
           .state('stats', {
             url: '/stats',
-            templateUrl: '/templates/stats.html'
+            templateUrl: 'templates/stats.html'
           })
       ;
 
