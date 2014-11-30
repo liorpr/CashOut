@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('CashOut', ['ionic'])
+angular.module('CashOut', ['ionic', 'CashOut.controllers', 'angularLocalStorage'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
@@ -31,12 +31,11 @@ angular.module('CashOut', ['ionic'])
 
           .state('home', {
             url: '/home',
-            templateUrl: 'templates/home.html',
-            controller: 'HomeCtrl'
+            templateUrl: 'templates/home.html'
           })
 
           .state('addScreen', {
-            url: '/addScreen',
+            url: '/addScreen/:whatToAdd',
             templateUrl: 'templates/addScreen.html'
           })
 

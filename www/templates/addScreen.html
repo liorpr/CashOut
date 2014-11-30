@@ -1,14 +1,14 @@
 <!--<script id="addScreen.html" type="text/ng-template">-->
-    <ion-view title="addScreen">
+    <ion-view title="addScreen" ng-controller="AddScreenCtrl">
         <ion-content padding="true" class="has-header">
             <div class="list card">
-                <div class="item item-divider">Add</div>
+                <div class="item item-divider">Add {{whatToAdd}}</div>
                 <div class="item item-body">
                     <ion-list></ion-list>
                     <form>
                         <label class="item item-input">
                             <span class="input-label">Sum</span>
-                            <input type="number" placeholder="">
+                            <input type="number" placeholder="Sum" ng-model="sum">
                         </label>
                         <label class="item item-select">
                             <span class="input-label">Type</span>
@@ -20,7 +20,8 @@
                         </label>
                     </form>
                     <div class="spacer" style="width: 266px; height: 52px;"></div>
-                    <a href="#/stats" class="button button-balanced button-block">Done!</a>
+                    <button class="button button-balanced button-block" ng-click="getLocalStorage(sum)">Add</button>
+                    <div class="addScreenMsg" ng-show="doneAdding" >Done!</div>
                 </div>
             </div>
         </ion-content>
